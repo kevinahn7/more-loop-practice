@@ -27,8 +27,17 @@ $(document).ready(function() {
         $(".answerAbove").show();
       } else {
         $(".result").text("Sorry, but you are not worthy");
+        $(".giveUp").show();
       }
     });
+
+    $(".giveUp").click(function() {
+      $(".result").text("Sorry, but you are not worthy");
+      $(".answerAbove").show();
+      $(".puzzle").show();
+      $(".giveUp").attr("disabled", "disabled");
+      $(".disable").attr("disabled", "disabled");
+    })
   })
 
 });

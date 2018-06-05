@@ -1,6 +1,7 @@
 .attempt,
 .try,
-.answerAbove {
+.answerAbove,
+.giveUp {
   display:none;
 }
 
