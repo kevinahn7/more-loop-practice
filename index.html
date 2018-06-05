@@ -15,16 +15,19 @@
     <h2 class="theTitle">Word Puzzle</h2>
     <p class="instruction">Type here what you want me to turn into a puzzle</p>
     <form class="puzzle">
-      <input type="text" class="quote bigger">
+      <input type="text" class="quote" required>
       <input type="submit" class="hide bigger">
     </form>
 
     <div class="answer">
     </div>
     <form class="attempt">
-      <h3>Try to solve the puzzle here</h3>
-      <input type="text" class="inputtedText bigger">
-      <input type="submit" class="disable bigger">
+      <p class="tryToSolve">Try to solve the puzzle here</p>
+      <p class="answerAbove">The answer is above</p>
+      <div class="align">
+        <input type="text" class="inputtedText" required>
+        <input type="submit" class="disable bigger">
+      </div>
     </form>
     <a href="index.html"><button class="try">Try again</button></a>
 

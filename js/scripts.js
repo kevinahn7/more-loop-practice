@@ -18,6 +18,8 @@ $(document).ready(function() {
       $(".puzzle").show();
       $(".hide").hide();
       $(".try").show();
+      $(".answerAbove").show();
+      $(".tryToSolve").hide();
       $(".disable").attr("disabled", "disabled");
       var inputtedText = $(".inputtedText").val();
       if (inputtedText.toLowerCase() === quote.toLowerCase()) {
