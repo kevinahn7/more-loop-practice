@@ -4,6 +4,7 @@ $(document).ready(function() {
     $(".puzzle").hide();
     $(".attempt").show();
     $(".instruction").hide();
+    $(".quote").attr("disabled", "disabled");
     var quote = $(".quote").val();
     var array = quote.split("");
     for (var x=0; x < array.length; x++) {
@@ -15,17 +16,17 @@ $(document).ready(function() {
 
     $(".attempt").submit(function(event) {
       event.preventDefault();
-      $(".puzzle").show();
       $(".hide").hide();
       $(".try").show();
-      $(".answerAbove").show();
       $(".tryToSolve").hide();
-      $(".disable").attr("disabled", "disabled");
       var inputtedText = $(".inputtedText").val();
       if (inputtedText.toLowerCase() === quote.toLowerCase()) {
-        $(".result").append("<h2>You got it, good job!</h2>");
+        $(".result").text("You got it, good job!");
+        $(".puzzle").show();
+        $(".disable").attr("disabled", "disabled");
+        $(".answerAbove").show();
       } else {
-        $(".result").append("<h2>Sorry, but you are not worthy</h2>");
+        $(".result").text("Sorry, but you are not worthy");
       }
     });
   })
