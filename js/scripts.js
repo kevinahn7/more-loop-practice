@@ -3,7 +3,7 @@ $(document).ready(function() {
     event.preventDefault();
     $(".puzzle").hide();
     $(".attempt").show();
-    $(".try").show();
+    $(".instruction").hide();
     var quote = $(".quote").val();
     var array = quote.split("");
     for (var x=0; x < array.length; x++) {
@@ -13,17 +13,17 @@ $(document).ready(function() {
       }
     };
 
-
     $(".attempt").submit(function(event) {
       event.preventDefault();
       $(".puzzle").show();
       $(".hide").hide();
+      $(".try").show();
       $(".disable").attr("disabled", "disabled");
       var inputtedText = $(".inputtedText").val();
       if (inputtedText.toLowerCase() === quote.toLowerCase()) {
-        $(".result").text("You got it good job!");
+        $(".result").append("<h2>You got it, good job!</h2>");
       } else {
-        $(".result").text("Sorry, but you are not worthy");
+        $(".result").append("<h2>Sorry, but you are not worthy</h2>");
       }
     });
   })

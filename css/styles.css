@@ -2,3 +2,32 @@
 .try {
   display:none;
 }
+
+body {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.theTitle {
+  font-size: 10em;
+  margin: 20px auto;
+}
+
+.answer {
+  font-size: 5em;
+}
+
+.result {
+  font-size: 3em;
+}
+
+input,
+button {
+  font-size: 2em;
+}
+
+.puzzle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
